@@ -4,6 +4,7 @@ import Home from "./Views/Home";
 import Contact from "./Views/Contact";
 import Gallery from "./Views/Gallery";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 import { HashRouter, Route, Routes } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/gallery" element={<Gallery />} />
         </Routes>
+        <Footer />
       </HashRouter>
     </div>
   );
