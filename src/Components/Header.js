@@ -1,37 +1,10 @@
 // Temporary navigation
 import React from "react";
-import { NavLink } from "react-router-dom";
-
-const Header = () => {
+import Navbar from "./Navbar";
+const Header = ({ language, setLanguage }) => {
   return (
     <header>
-      <ul>
-        <li>
-          <NavLink activeclassname="activeLinkClass" className="" end to="/">
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            activeclassname="activeLinkClass"
-            className=""
-            end
-            to="/contact"
-          >
-            Contact
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            activeclassname="activeLinkClass"
-            className=""
-            end
-            to="/gallery"
-          >
-            Gallery
-          </NavLink>
-        </li>
-      </ul>
+      <Navbar language={language} setLanguage={setLanguage} />
     </header>
   );
 };

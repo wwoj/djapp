@@ -1,9 +1,9 @@
 import React from "react";
 import Ratio from "react-bootstrap/Ratio";
-const Gallery = () => {
+const GalleryOther = () => {
   return (
     <div className="page-container">
-      Gallery
+      Gallery Other
       <div style={{ width: 660, height: "auto" }}>
         <Ratio aspectRatio="16x9">
           <iframe
@@ -21,4 +21,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default GalleryOther;
