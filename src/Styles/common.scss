@@ -1,0 +1,29 @@
+.ul-language{
+    list-style-type: none;
+}
+.dis-flex{
+    display: flex;
+}
+.aling-center{
+    align-items: center
+}
+.dis-flex-sb{
+    @extend .dis-flex;
+    justify-content: space-between;
+}
+.dis-flex-cc{
+    @extend .dis-flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+.dis-flex-sb-ac{
+    @extend .dis-flex-sb;
+    @extend .aling-center;
+}
+.w100{
+    width: 100%;
+}
+body{
+    background-color: black;
+}
