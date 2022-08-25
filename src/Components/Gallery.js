@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faXmark,
   faCircleChevronLeft,
   faCircleChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+
 import Img1 from "../Pictures/pic1.jpg";
 import Img2 from "../Pictures/pic2.jpg";
 import Img3 from "../Pictures/pic3.jpg";
@@ -35,7 +37,9 @@ const Gallery = () => {
     },
     {
       id: 5,
+
       imgSrc: Img5,
+
     },
     {
       id: 6,
@@ -56,6 +60,7 @@ const Gallery = () => {
   ];
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState("");
+
   const [currentId, setCurrentId] = useState(0);
   // useEffect(() => {
   //   console.log("ID changed");
@@ -65,11 +70,13 @@ const Gallery = () => {
     setTempImgSrc(imgSrc);
     setCurrentId(index);
 
+
     setModel(true);
   };
   return (
     <>
       <div className={model ? "model open" : "model"}>
+
         <button
           className="btn-prev"
           onClick={() => {
@@ -106,6 +113,7 @@ const Gallery = () => {
           />
         </button>
 
+
         <FontAwesomeIcon
           style={{ color: "white" }}
           icon={faXmark}
@@ -124,7 +132,9 @@ const Gallery = () => {
               className="pics"
               key={index}
               onClick={() => {
+
                 getImg(item.imgSrc, index);
+
               }}
             >
               <img
