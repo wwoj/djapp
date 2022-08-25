@@ -77,4 +77,28 @@
         cursor: pointer;
         opacity: 0.8;
     }
+
+}
+.model.open button{
+    position: fixed;
+    top: 50%;
+    background-color: transparent;
+    transition: opacity 0.4s ease;
+    &.btn-prev{
+        left: 0;
+        transform: translate(50%, -50%);
+    }
+    &.btn-next{
+        right: 0;
+        transform: translate(-50%, -50%);
+    }
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+   
+}
+.yt-container{
+    // display: flex;
+
 }

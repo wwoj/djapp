@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+
+import {
+  faXmark,
+  faCircleChevronLeft,
+  faCircleChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
+
 import Img1 from "../Pictures/pic1.jpg";
 import Img2 from "../Pictures/pic2.jpg";
 import Img3 from "../Pictures/pic3.jpg";
@@ -31,7 +37,9 @@ const Gallery = () => {
     },
     {
       id: 5,
-      imgSrc: Img1,
+
+      imgSrc: Img5,
+
     },
     {
       id: 6,
@@ -53,14 +61,59 @@ const Gallery = () => {
   const [model, setModel] = useState(false);
   const [tempImgSrc, setTempImgSrc] = useState("");
 
-  const getImg = (imgSrc) => {
+  const [currentId, setCurrentId] = useState(0);
+  // useEffect(() => {
+  //   console.log("ID changed");
+  //   setTempImgSrc(data[currentId].imgSrc);
+  // }, [currentId]);
+  const getImg = (imgSrc, index) => {
     setTempImgSrc(imgSrc);
+    setCurrentId(index);
+
+
     setModel(true);
   };
   return (
     <>
       <div className={model ? "model open" : "model"}>
+
+        <button
+          className="btn-prev"
+          onClick={() => {
+            let tempId = currentId - 1;
+            let maxIndex = data.length - 1;
+            tempId = tempId < 0 ? maxIndex : tempId;
+            setCurrentId(tempId);
+            setTempImgSrc(data[tempId].imgSrc);
+          }}
+        >
+          <FontAwesomeIcon
+            style={{ color: "white" }}
+            icon={faCircleChevronLeft}
+            size="3x"
+          />
+        </button>
+
         <img src={tempImgSrc} alt="popup" />
+
+        <button
+          className="btn-next"
+          onClick={() => {
+            let tempId = currentId + 1;
+            let maxIndex = data.length - 1;
+            tempId = tempId > maxIndex ? 0 : tempId;
+            setCurrentId(tempId);
+            setTempImgSrc(data[tempId].imgSrc);
+          }}
+        >
+          <FontAwesomeIcon
+            style={{ color: "white" }}
+            icon={faCircleChevronRight}
+            size="3x"
+          />
+        </button>
+
+
         <FontAwesomeIcon
           style={{ color: "white" }}
           icon={faXmark}
@@ -79,7 +132,9 @@ const Gallery = () => {
               className="pics"
               key={index}
               onClick={() => {
-                getImg(item.imgSrc);
+
+                getImg(item.imgSrc, index);
+
               }}
             >
               <img

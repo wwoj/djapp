@@ -24,7 +24,7 @@ const Cookies = ({ setCookies }) => {
             }}
             className="cookie-btn-accept"
           >
-            Undestood
+            UNDERSTOOD
           </button>
         </form>
       </div>

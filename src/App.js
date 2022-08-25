@@ -31,7 +31,6 @@ function App() {
       cookiesMem = "";
     }
     setCookies(cookiesMem.cookies === "accepted" ? true : false);
-    console.log(cookies);
   }
   return (
     <div className="App">
