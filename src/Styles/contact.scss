@@ -1,0 +1,81 @@
+.contact-container{
+    padding: 2rem 0;
+
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Raleway", Sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6em;
+    letter-spacing: 0;
+    &>div,&>form{
+        color:white;
+        width: 50%;
+        &>div:not(:first-child){
+            width: 90%;
+            margin: auto;
+        }
+    }
+}
+.contact-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info{
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    p{
+        margin: 0;
+        padding: 0;
+    }
+
+    
+}
+.contact-text{
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.contact-input{
+    border-bottom: 1px solid rgb(179, 179, 179);
+    padding: 0 1rem;
+    width: 48%;
+    input{
+        color: white;
+        border:  none;
+        background-color: transparent;
+        width: 100%;
+    }
+
+}
+.form-data-name-mail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.form-textarea{
+    width: 100%;
+    margin: 2rem 0;
+    padding: 0.5rem;
+}
+.form-submit{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    font-weight: 600;
+    button{
+        padding: 5px;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}

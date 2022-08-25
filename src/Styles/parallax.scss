@@ -1,0 +1,22 @@
+.react-parallax-content{
+    height: 100%;
+    // background-color: rebeccapurple;
+    color: white;
+    .parallax-container{
+        max-width: 40%;
+        min-width: 250px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(10%, -50%);
+        padding: 1rem;
+    }
+    .parallax-title{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    .parallax-text{
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}

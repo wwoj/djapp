@@ -8,11 +8,10 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import GalleryDropdown from "./GalleryDropdown";
 const classNameFunc = ({ isActive }) => (isActive ? "active_link" : "");
 const Navbar = ({ language, setLanguage }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
   useEffect(() => {
     const closeDropdown = (e) => {
-      console.log("class:", e.path[0].className);
       if (e.path[0] !== btnRef.current) {
         setIsOpen(false);
       }
@@ -53,7 +52,6 @@ const Navbar = ({ language, setLanguage }) => {
           <button
             className="btn-dropdown-action"
             onClick={() => {
-              console.log("Show popup");
               setIsOpen(!isOpen);
             }}
             ref={btnRef}
@@ -69,7 +67,6 @@ const Navbar = ({ language, setLanguage }) => {
                 language === "en" ? "ativeLanguage" : ""
               }`}
               onClick={() => {
-                console.log(language);
                 setLanguage("en");
                 alert("Changed to English");
               }}
@@ -81,7 +78,6 @@ const Navbar = ({ language, setLanguage }) => {
                 language === "pl" ? " ativeLanguage" : ""
               }`}
               onClick={() => {
-                console.log(language);
                 setLanguage("pl");
                 alert("Changed to Polish");
               }}
