@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const GalleryDropdown = ({ classNameFunc, isOpen, btnRef1 }) => {
   return (
-    <div className={`gallery-dropdown` + (isOpen ? " open" : " close")}>
+    <div className={`gallery-dropdown` + (isOpen ? " open-nav" : " close")}>
       <ul>
         <li>
           <NavLink

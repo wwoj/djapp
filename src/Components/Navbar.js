@@ -8,7 +8,7 @@ import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import GalleryDropdown from "./GalleryDropdown";
 const classNameFunc = ({ isActive }) => (isActive ? "active_link" : "");
 const Navbar = ({ language, setLanguage }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
   useEffect(() => {
     const closeDropdown = (e) => {

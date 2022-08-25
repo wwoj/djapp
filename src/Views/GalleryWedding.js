@@ -1,22 +1,11 @@
 import React from "react";
-import Ratio from "react-bootstrap/Ratio";
+import Gallery from "../Components/Gallery";
 const GalleryWedding = () => {
   return (
     <div className="page-container">
-      Gallery Wedding
-      <div style={{ width: 660, height: "auto" }}>
-        <Ratio aspectRatio="16x9">
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/LVhNmk_J0Jc"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </Ratio>
-      </div>
+      <h1 style={{ textAlign: "center" }}>Image Gallery</h1>
+      <h2 style={{ textAlign: "center" }}>please Subscribe Code Wit Yt</h2>
+      <Gallery />
     </div>
   );
 };
