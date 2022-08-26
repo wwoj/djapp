@@ -2,9 +2,9 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="contact-container">
+    <div className="contact-container" id="contact">
       <div className="contact-info-container">
-        <div class="contact-info">
+        <div className="contact-info">
           <div>
             <h2>Contact</h2>
             <p>Rafal Kowalski</p>

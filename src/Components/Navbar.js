@@ -6,8 +6,11 @@ import PolandFlag from "../Pictures/PolandFlag.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import GalleryDropdown from "./GalleryDropdown";
+import { Link } from "react-scroll";
+import { HashLink } from "react-router-hash-link";
+
 const classNameFunc = ({ isActive }) => (isActive ? "active_link" : "");
-const Navbar = ({ language, setLanguage }) => {
+const Navbar = ({ language, setLanguage, urlPath }) => {
   const [isOpen, setIsOpen] = useState(false);
   const btnRef = useRef();
   useEffect(() => {
@@ -20,10 +23,12 @@ const Navbar = ({ language, setLanguage }) => {
     return () => document.body.removeEventListener("click", closeDropdown);
   }, []);
   return (
-    <div className="nav-container">
+    <div className="nav-container dis-flex-sb-ac">
       <ul className="navbar-list">
         <li>
-          <img className="logo-container" src={Logo} alt="DJKoval Logo" />
+          <NavLink className={classNameFunc} end to="/">
+            <img className="logo-container" src={Logo} alt="DJKoval Logo" />
+          </NavLink>
         </li>
       </ul>
       <ul className="navbar-list nav-links">
@@ -33,21 +38,20 @@ const Navbar = ({ language, setLanguage }) => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={classNameFunc} end to="/">
-            Wedding
-          </NavLink>
+          {urlPath === "/" ? (
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-450}
+              duration={200}
+            >
+              Contact
+            </Link>
+          ) : (
+            <HashLink to="/#contact">Contact</HashLink>
+          )}
         </li>
-        <li>
-          <NavLink className={classNameFunc} end to="/">
-            Music
-          </NavLink>
-        </li>
-        <li>
-          <NavLink className={classNameFunc} end to="/contact">
-            Contact
-          </NavLink>
-        </li>
-
         <li className="li-dropdown">
           <button
             className="btn-dropdown-action"

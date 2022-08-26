@@ -5,7 +5,6 @@ import ContainerWidgetText from "./ContainerWidgetText";
 import ContainerWidgetPhoto from "./ContainerWidgetPhoto";
 
 function ContainerWidget(props) {
-  console.log("Props:", props.video);
   return (
     <section className="full-container">
       <div className={`half-container ${props.left}`}>
@@ -16,7 +15,6 @@ function ContainerWidget(props) {
       </div>
     </section>
   );
-
 
   function typeOfLeftContent() {
     if (props.left === "video") {
@@ -35,7 +33,6 @@ function ContainerWidget(props) {
     }
   }
 
-
   function typeOfRightContent() {
     if (props.right === "text") {
       return (
@@ -49,7 +46,7 @@ function ContainerWidget(props) {
       return <ContainerWidgetVideo video={props.video} />;
     }
 
-    if (props.right ==='photo'){
+    if (props.right === "photo") {
       return <ContainerWidgetPhoto photoURL={props.photoURL} />;
     }
   }

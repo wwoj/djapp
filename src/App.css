@@ -5,6 +5,10 @@
   flex-direction: column;
   position: relative;
   align-items: center;
+  font-family: "Armata",Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .page-container{
   flex: 1 1;
