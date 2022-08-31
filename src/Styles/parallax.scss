@@ -1,22 +1,48 @@
-.react-parallax-content{
-    height: 100%;
-    // background-color: rebeccapurple;
-    color: white;
-    .parallax-container{
-        max-width: 40%;
-        min-width: 250px;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translate(10%, -50%);
-        padding: 1rem;
+.react-parallax-content {
+  height: 100%;
+  // background-color: rebeccapurple;
+  color: white;
+  .parallax-container {
+    max-width: 40%;
+    min-width: 250px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(10%, -50%);
+    padding: 1rem;
+  }
+  .parallax-title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .parallax-text {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+}
+.react-parallax {
+  height: 500px;
+}
+@media (max-width: 850px) {
+  .react-parallax-content {
+    .parallax-title {
+      font-size: 2rem;
     }
-    .parallax-title{
-        font-size: 3rem;
-        font-weight: 700;
+    .parallax-text {
+      font-size: 1rem;
     }
-    .parallax-text{
-        font-size: 1.4rem;
-        font-weight: 500;
+  }
+}
+@media (max-width: 300px) {
+  .react-parallax-content {
+    .parallax-title {
+      font-size: 1.5rem;
     }
+    .parallax-text {
+      font-size: 0.8rem;
+    }
+  }
+  .react-parallax {
+    height: 400px;
+  }
 }

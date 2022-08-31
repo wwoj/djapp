@@ -6,7 +6,7 @@ import ContainerWidgetPhoto from "./ContainerWidgetPhoto";
 
 function ContainerWidget(props) {
   return (
-    <section className="full-container">
+    <section className="full-container" id={props.id}>
       <div className={`half-container ${props.left}`}>
         {typeOfLeftContent()}
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { animateScroll as scroll } from "react-scroll";
+
 import {
   faFacebook,
   faTwitter,
@@ -60,7 +62,11 @@ const Footer = () => {
       </section>
       <section className="dis-flex-cc w100">
         <ul className="dis-flex-cc w100 footer-list">
-          <li>Home</li>
+          <li>
+            <a onClick={() => scroll.scrollToTop()} href="/">
+              Top
+            </a>
+          </li>
           <li>
             <FontAwesomeIcon
               icon={faLocationDot}
@@ -98,21 +104,3 @@ const Footer = () => {
   );
 };
 export default Footer;
-// {
-/* <button
-        onClick={() => {
-          let test = { cookies: "" };
-          document.cookie = JSON.stringify(test);
-        }}
-      >
-        Cookie Write
-      </button>
-      <button
-        onClick={() => {
-          let user = document.cookie;
-          console.log(JSON.parse(user));
-        }}
-      >
-        Cookie Read
-      </button> */
-// }

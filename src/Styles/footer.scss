@@ -1,57 +1,71 @@
-footer{
-    width: 100%;
-    padding: 1rem 2rem;
-    box-shadow: rgb(255 255 255 / 35%) 0px 2px 8px 0px;
-    background-color: #0e0e0ebf;
+footer {
+  width: 100%;
+  padding: 1rem 2rem;
+  box-shadow: rgb(255 255 255 / 35%) 0px 2px 8px 0px;
+  background-color: #0e0e0ebf;
 }
-.footer-icon-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.footer-icon-box{
-    color: #a1a1a1;
-    margin: 10px ;
-    transition: all 0.5s ease;
-    border-radius: 50%;
-    border: 1px solid #a1a1a1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4px; 
-    min-height: 28px;
-    min-width: 28px;
+.footer-icon-box {
+  color: #a1a1a1;
+  margin: 10px;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  border: 1px solid #a1a1a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  min-height: 28px;
+  min-width: 28px;
 
-    &:hover{
+  &:hover {
+    cursor: pointer;
+    filter: brightness(80%);
+  }
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #a1a1a1;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  li {
+    margin: 0 1rem;
+
+    a {
+      transition: all 0.5s ease;
+      text-decoration: none;
+      color: #a1a1a1;
+      &:hover {
         cursor: pointer;
-        filter: brightness(80%);
+        color: rgb(8, 70, 162);
+      }
     }
+  }
 }
-.footer-list{
-    list-style: none;
-    color: #a1a1a1;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-    li{
-        margin: 0 1rem;
-        
-        a{
-            transition: all 0.5s ease;
-            text-decoration: none;
-            color: #a1a1a1;
-            &:hover{
-                cursor: pointer;
-                color:rgb(8, 70, 162)
-            }
-        }
-    }
+.footer-cc {
+  font-size: 0.7rem;
+  color: #a1a1a1;
 }
-.footer-cc{
-    font-size: 0.7rem;
-    color: #a1a1a1;
+.footer-icon-bottom {
+  margin: 0 1rem;
 }
-.footer-icon-bottom{
-    margin: 0 1rem ;
+
+@media (max-width: 400px) {
+  .footer-list {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.78rem;
+  }
 }

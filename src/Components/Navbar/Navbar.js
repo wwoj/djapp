@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../Pictures/Logo.png";
-import USAFlag from "../Pictures/USAFlag.png";
-import PolandFlag from "../Pictures/PolandFlag.png";
+import Logo from "../../Pictures/Logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import GalleryDropdown from "./GalleryDropdown";
-import { Link } from "react-scroll";
-import { HashLink } from "react-router-hash-link";
+import NavbarLanguage from "./NavbarLanguage";
+// import navlink
+
+import NavItem from "./NavItem";
 
 const classNameFunc = ({ isActive }) => (isActive ? "active_link" : "");
 const Navbar = ({ language, setLanguage, urlPath }) => {
@@ -38,20 +38,56 @@ const Navbar = ({ language, setLanguage, urlPath }) => {
           </NavLink>
         </li>
         <li>
-          {urlPath === "/" ? (
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-450}
-              duration={200}
-            >
-              Contact
-            </Link>
-          ) : (
-            <HashLink to="/#contact">Contact</HashLink>
-          )}
+          <NavItem
+            urlLink="/"
+            idLink="/#Lorem_1"
+            id="Lorem_1"
+            title="Lorem 1"
+            type={2}
+            offset={-200}
+            duration={200}
+            urlPath={urlPath}
+          />
         </li>
+        <li>
+          <NavItem
+            urlLink="/"
+            idLink="/#Lorem_2"
+            id="Lorem_2"
+            title="Lorem 2"
+            type={2}
+            offset={-200}
+            duration={200}
+            urlPath={urlPath}
+          />
+        </li>
+        <li>
+          <NavItem
+            urlLink="/"
+            idLink="/#Lorem_3"
+            id="Lorem_3"
+            title="Lorem 3"
+            type={2}
+            offset={-200}
+            duration={200}
+            urlPath={urlPath}
+          />
+        </li>
+        <li>
+          <NavItem
+            urlLink="/"
+            idLink="/#contact"
+            id="contact"
+            title="Contact"
+            type={2}
+            offset={-450}
+            duration={200}
+            urlPath={urlPath}
+          />
+        </li>
+        {/* <li>
+          <a onClick={() => scroll.scrollToTop()}>Scroll To Bottom</a>
+        </li> */}
         <li className="li-dropdown">
           <button
             className="btn-dropdown-action"
@@ -65,30 +101,7 @@ const Navbar = ({ language, setLanguage, urlPath }) => {
           <GalleryDropdown classNameFunc={classNameFunc} isOpen={isOpen} />
         </li>
         <li>
-          <div className="dis-flex lang-container">
-            <div
-              className={`lang-ico-container dis-flex ${
-                language === "en" ? "ativeLanguage" : ""
-              }`}
-              onClick={() => {
-                setLanguage("en");
-                alert("Changed to English");
-              }}
-            >
-              <img className="s" src={USAFlag} alt="languageIco" />
-            </div>
-            <div
-              className={`lang-ico-container dis-flex${
-                language === "pl" ? " ativeLanguage" : ""
-              }`}
-              onClick={() => {
-                setLanguage("pl");
-                alert("Changed to Polish");
-              }}
-            >
-              <img className="s" src={PolandFlag} alt="languageIco" />
-            </div>
-          </div>
+          <NavbarLanguage setLanguage={setLanguage} language={language} />
         </li>
       </ul>
     </div>

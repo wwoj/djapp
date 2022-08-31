@@ -11,7 +11,7 @@ const Contact = () => {
             <p>Timber Tr, 1528</p>
             <p>Wheaton, Il 60189</p>
 
-            <p>Tel: +48+534-073-727</p>
+            <p>Tel: (+48) 534-073-727</p>
             <p>e-mail: wojcik.wojtek@yahoo.pl</p>
           </div>
         </div>
@@ -38,7 +38,11 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <textarea className="form-textarea" rows="8"></textarea>
+          <textarea
+            className="form-textarea"
+            rows="8"
+            placeholder="The best way to contact me about DJs for weddings and events is by e-mail or by phone. Then a cup of coffee and a chat"
+          ></textarea>
         </div>
         <div className="form-submit">
           <button type="submit">Send message</button>
