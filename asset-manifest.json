@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/djapp/static/css/main.96de19b5.css",
+    "main.js": "/djapp/static/js/main.8d1a4943.js",
+    "static/js/787.e9e57508.chunk.js": "/djapp/static/js/787.e9e57508.chunk.js",
+    "static/media/Logo.png": "/djapp/static/media/Logo.6a01a4f7111eec898b14.png",
+    "static/media/pic7.jpg": "/djapp/static/media/pic7.54ad562f73d0a7629a1d.jpg",
+    "static/media/pic5.jpg": "/djapp/static/media/pic5.07636ee1d6aad9e7158e.jpg",
+    "static/media/pic2.jpg": "/djapp/static/media/pic2.7e6cce723c2c6c16b633.jpg",
+    "static/media/pic1.jpg": "/djapp/static/media/pic1.05ff7e66061f53b3d3d4.jpg",
+    "static/media/pic9.jpg": "/djapp/static/media/pic9.036b451db4d45d3272ee.jpg",
+    "static/media/pic6.jpg": "/djapp/static/media/pic6.0dd3928a3c7ac69e5617.jpg",
+    "static/media/USAFlag.png": "/djapp/static/media/USAFlag.0782f37242f6c0f78375.png",
+    "static/media/pic4.jpg": "/djapp/static/media/pic4.f9e5c8a4c0d608b98c3b.jpg",
+    "static/media/pic8.jpg": "/djapp/static/media/pic8.e2ec6019780a7135e4f5.jpg",
+    "static/media/pic3.jpg": "/djapp/static/media/pic3.4efd3df9054fb74834c6.jpg",
+    "index.html": "/djapp/index.html",
+    "main.96de19b5.css.map": "/djapp/static/css/main.96de19b5.css.map",
+    "main.8d1a4943.js.map": "/djapp/static/js/main.8d1a4943.js.map",
+    "787.e9e57508.chunk.js.map": "/djapp/static/js/787.e9e57508.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.96de19b5.css",
+    "static/js/main.8d1a4943.js"
+  ]
+}
